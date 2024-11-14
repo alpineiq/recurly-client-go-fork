@@ -274,7 +274,7 @@ func (c *Client) Do(req *http.Request, v interface{}) error {
 	if successfulStatus(res.StatusCode) {
 		if len(body) > 0 {
 			if err = json.Unmarshal(body, v); err != nil {
-				c.Log.Errorf("Failed to deserialize JSON:\n%s", body)
+				c.Log.Errorf("Failed to deserialize JSON:\n%s, %s", body, err.Error())
 				return err
 			}
 		}
