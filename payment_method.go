@@ -14,9 +14,6 @@ type PaymentMethod struct {
 
 	Object string `json:"object,omitempty"`
 
-	// Visa, MasterCard, American Express, Discover, JCB, etc.
-	CardType string `json:"card_type,omitempty"`
-
 	// Credit card number's first six digits.
 	FirstSix string `json:"first_six,omitempty"`
 
